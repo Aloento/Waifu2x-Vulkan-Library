@@ -20,14 +20,14 @@ https://github.com/nihui/waifu2x-ncnn-vulkan
 ### 获取
 
 [**发布的库稳定版本**](https://github.com/Aloento/Waifu2x-Vulkan-Library/releases/latest)  
-[**OpenMP依赖库**](https://github.com/Aloento/Waifu2x-Vulkan-CSharp/raw/master/vcomp140.dll)  
+[**OpenMP依赖库(非必要)**](https://github.com/Aloento/Waifu2x-Vulkan-CSharp/raw/master/vcomp140.dll)  
 [**模型**](https://github.com/Aloento/Waifu2x-Vulkan-CSharp/tree/master/models)
 
 ### 自行编译
 
 #### 安装依赖
 
-* 安装最新的Visual Studio和C++工具链  
+* 安装最新的Visual Studio和 **C++工具链**  
   https://visualstudio.microsoft.com/zh-hans/downloads/
 
 
@@ -42,7 +42,7 @@ https://github.com/nihui/waifu2x-ncnn-vulkan
 
 #### 拉取源码
 
-```
+```shell
 git clone git@github.com:Aloento/Waifu2x-Vulkan-Library.git
 cd Waifu2x-Vulkan-Library
 git submodule update --init --recursive
@@ -56,7 +56,7 @@ git submodule update --init --recursive
 * 删除 CMakeLists.txt 中第229行的 wrapper_wrap.cxx
 * 进行编译
 
-```
+```shell
 mkdir build
 cd build
 cmake ../src
@@ -75,7 +75,7 @@ cmake --build . -j 4
 
 假设我们要生成给在Windows下C#使用的代码
 
-```
+```shell
 cd src
 swig -c++ -csharp wrapper_win.i
 mkdir build
